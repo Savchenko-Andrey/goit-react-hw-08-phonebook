@@ -6,7 +6,7 @@ export const ConteierContacts = styled(Conteier)`
   flex-direction: column;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('https://mobimg.b-cdn.net/v3/fetch/e0/e007a64de6c3849b47548220b2367d3f.jpeg?h=900&r=0.5');
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/IPhone_13_vector.svg/1200px-IPhone_13_vector.svg.png');
 `;
 
 export const NameText = styled.p`

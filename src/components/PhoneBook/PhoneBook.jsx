@@ -37,7 +37,7 @@ export const Phonebook = () => {
         <ThreeDots
           height="20"
           width="20"
-          radius="9"
+          // radius="9"
           color="#ffd700"
           ariaLabel="three-dots-loading"
           wrapperStyle={{}}

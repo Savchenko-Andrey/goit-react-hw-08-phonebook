@@ -21,5 +21,5 @@ export const ConteierRegister = styled(Conteier)`
   flex-direction: column;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('https://mobimg.b-cdn.net/v3/fetch/78/78e819e4bfdbb7015733d1bda7ddd502.jpeg?h=900&r=0.5');
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/IPhone_13_vector.svg/1200px-IPhone_13_vector.svg.png');
 `;

@@ -18,7 +18,7 @@ const RegisterUser = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { IconsExpand, IconsCheckBox, IconsStanby, IconsRecord } = icons;
+  const { IconsExpand } = icons;
 
   const hendleSubmit = ({ name, email, password }, { resetForm }) => {
     dispatch(fethcRegisterUser({ name, email, password }));
@@ -28,13 +28,21 @@ const RegisterUser = () => {
 
   return (
     <ConteierRegister>
-      <IconsRecord />
       <Formik
         initialValues={initialValue}
         onSubmit={hendleSubmit}
         validationSchema={validationSchema}
       >
         <FormContact>
+          <Box
+            marginTop="10px"
+            marginBottom="100px"
+            width="270px"
+        >
+          <Links to={location.state?.from ?? '/'}>
+            <IconsExpand />
+          </Links>
+        </Box>
           <Box
             display="flex"
             flexDirection="column"
@@ -57,24 +65,6 @@ const RegisterUser = () => {
           </Box>
         </FormContact>
       </Formik>
-      <Box
-        display="flex"
-        alignItems="flex-start"
-        gridGap="20px"
-        justifyContent="space-around"
-        mt="auto"
-        width="380px"
-      >
-        <Links to={location.state?.from ?? '/'}>
-          <IconsExpand />
-        </Links>
-        <Links to={location.state?.from ?? '/'}>
-          <IconsStanby />
-        </Links>
-        <Links to={location.state?.from ?? '/'}>
-          <IconsCheckBox />
-        </Links>
-      </Box>
     </ConteierRegister>
   );
 };

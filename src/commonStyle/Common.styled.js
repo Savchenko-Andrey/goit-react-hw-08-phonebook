@@ -94,19 +94,20 @@ export const Links = styled(Link)`
 `;
 
 export const LinksContacts = styled(Links)`
-  margin-right: auto;
+  margin-top: 70px;
+  font-size: 30px;
 `;
 
 export const Conteier = styled.div`
-  width: 380px;
-  height: 600px;
+  width: 330px;
+  height: 690px;
   padding: ${p => p.theme.space[3]}px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('https://mobimg.b-cdn.net/v3/fetch/01/01f2c43831ed91f9b5e28e0892c1f612.jpeg?h=900&r=0.5');
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/IPhone_13_vector.svg/1200px-IPhone_13_vector.svg.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 15px;
+  border-radius: 55px;
 `;
 
 const IconsRecord = styled(FiberManualRecordIcon)`

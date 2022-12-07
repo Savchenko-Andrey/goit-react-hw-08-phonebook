@@ -20,5 +20,5 @@ export const ConteierLogin = styled(Conteier)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('https://mobimg.b-cdn.net/v3/fetch/78/78e819e4bfdbb7015733d1bda7ddd502.jpeg?h=900&r=0.5');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/IPhone_13_vector.svg/1200px-IPhone_13_vector.svg.png'); ;
 `;

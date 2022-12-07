@@ -18,7 +18,7 @@ const LogInUser = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { IconsExpand, IconsCheckBox, IconsStanby, IconsRecord } = icons;
+  const { IconsExpand } = icons;
 
   const hendleSubmit = ({ email, password }, { resetForm }) => {
     dispatch(fetchLogInUser({ email, password }));
@@ -27,13 +27,13 @@ const LogInUser = () => {
   };
 
   return (
+    
     <ConteierLogin
       display="flex"
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
     >
-      <IconsRecord />
       <Formik
         initialValues={initialValue}
         onSubmit={hendleSubmit}
@@ -41,6 +41,15 @@ const LogInUser = () => {
       >
         <FormContact>
           <Box
+            marginTop="10px"
+            width="270px"
+          >
+            <Links to={location.state?.from ?? '/'}>
+              <IconsExpand />
+            </Links>
+          </Box>
+          <Box
+            marginTop="70px"
             display="flex"
             flexDirection="column"
             alignItems="center"
@@ -59,24 +68,6 @@ const LogInUser = () => {
           </Box>
         </FormContact>
       </Formik>
-      <Box
-        display="flex"
-        alignItems="flex-start"
-        gridGap="20px"
-        justifyContent="space-around"
-        mt="auto"
-        width="380px"
-      >
-        <Links to={location.state?.from ?? '/'}>
-          <IconsExpand />
-        </Links>
-        <Links to={location.state?.from ?? '/'}>
-          <IconsStanby />
-        </Links>
-        <Links to={location.state?.from ?? '/'}>
-          <IconsCheckBox />
-        </Links>
-      </Box>
     </ConteierLogin>
   );
 };

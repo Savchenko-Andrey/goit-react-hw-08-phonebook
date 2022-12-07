@@ -13,7 +13,7 @@ function UserMenu() {
   const token = useSelector(authTokenSelector);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { IconsExpand, IconsCheckBox, IconsStanby, IconsRecord } = icons;
+  const { IconsExpand } = icons;
 
   const handleLogOutUser = () => {
     dispatch(fetchLogOutUser());
@@ -22,14 +22,23 @@ function UserMenu() {
   return (
     <>
       <ConteierContacts>
-        <IconsRecord />
         <Box
-          width="380px"
+          marginTop="10px"
+          width="270px"
+        >
+          <Links to={location.state?.from ?? '/'}>
+            <IconsExpand />
+          </Links>
+        </Box>
+        <Box
+          width="300px"
           display="flex"
           alignItems="center"
           justifyContent="space-between"
           gridGap={[20]}
           px={[3]}
+          marginTop="70px"
+          marginBottom="30px"
         >
           <NameText>Hello {name}</NameText>
 
@@ -44,24 +53,6 @@ function UserMenu() {
           </Button>
         </Box>
         {token && <Phonebook />}
-        <Box
-          display="flex"
-          alignItems="flex-start"
-          gridGap="20px"
-          justifyContent="space-around"
-          mt="auto"
-          width="380px"
-        >
-          <Links to={location.state?.from ?? '/'}>
-            <IconsExpand />
-          </Links>
-          <Links to={location.state?.from ?? '/'}>
-            <IconsStanby />
-          </Links>
-          <Links to={location.state?.from ?? '/'}>
-            <IconsCheckBox />
-          </Links>
-        </Box>
       </ConteierContacts>
     </>
   );
